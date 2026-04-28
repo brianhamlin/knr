@@ -1,0 +1,8 @@
+# Build outputs
+build/
+
+# macOS debug symbol bundles
+*.dSYM/
+
+# macOS Finder metadata
+.DS_Store
