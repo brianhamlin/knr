@@ -4,24 +4,14 @@
 int getLine(char line[], int maxline);
 void copy(char to[], char from[]);
 
-/* print longest input line */
+/* print the length of a line and its text */
 int main(void) {
 
   int len;
-  int max;
   char line[MAXLINE];
-  char longest[MAXLINE];
 
-  max = 0;
   while ((len = getLine(line, MAXLINE)) > 0) {
-    if (len > max) {
-      max = len;
-      copy(longest, line);
-    }
-  }
-
-  if (max > 0) {
-    printf("%s", longest);
+    printf("len: %d, text: %s", len, line);
   }
 
   return 0;
@@ -42,15 +32,4 @@ int getLine(char s[], int lim) {
   }
   s[i] = '\0'; /* terminate string */
   return i;
-}
-
-/* copy: copy 'from' into 'to'; assume to is big enough */
-void copy(char to[], char from[]) {
-  int i;
-
-  /* assignment happens in the while loop until it terminates */
-  i = 0;
-  while ((to[i] = from[i]) != '\0') {
-    ++i;
-  }
 }
