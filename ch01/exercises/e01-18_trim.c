@@ -20,14 +20,12 @@ void trim(char str[]) {
   char trimmed[MAXLINE];
 
   int lastCharIndex = -1;
-  int i = 0;
+  int i;
 
-  /* find index of last non blank char */
-  while (str[i] != '\0') {
+  for (i = 0; i < MAXLINE && str[i] != '\0'; i++) {
     if (str[i] != ' ' && str[i] != '\t' && str[i] != '\n') {
       lastCharIndex = i;
     }
-    i++;
   }
 
   if (lastCharIndex == -1) {

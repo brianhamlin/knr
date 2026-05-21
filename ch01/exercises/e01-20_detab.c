@@ -16,8 +16,6 @@ int main(void) {
   }
 
   return 0;
-
-  return 0;
 }
 
 /* detab: copies str into detabbed, replacing tabs with spaces up to the next tab position */
